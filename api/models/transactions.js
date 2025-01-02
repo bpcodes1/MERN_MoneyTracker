@@ -2,6 +2,7 @@
 const mongoose = require('mongoose');
 const {Schema, model} = mongoose;
 
+// Transaction Schema
 const TransactionSchema = new Schema({
     name: {type: String, required: true},
     price: {type: Number, required: true},
@@ -11,4 +12,5 @@ const TransactionSchema = new Schema({
 
 const TransactionModel = model('Transaction', TransactionSchema);
 
+// Export transaction for use in MERN App
 module.exports = TransactionModel
